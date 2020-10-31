@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Pembimbing Intern</string>
+    <string-array name="status">
+        <item>Diterima</item>
+        <item>Ditolak</item>
+        <item>Menunggu</item>
+    </string-array>
+</resources>

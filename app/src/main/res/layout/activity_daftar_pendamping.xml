@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="vertical"
+    tools:context=".Activity.DaftarPendampingActivity">
+
+    <RelativeLayout
+        android:id="@+id/card_view_inner"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/judul"
+            android:layout_width="355dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/logo2"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="324dp"
+            android:layout_height="203dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="41dp"
+            android:layout_marginBottom="-25dp"
+            android:src="@drawable/selamatdatang" />
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="342dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:background="#655B50">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#ffff">
+
+                <EditText
+                    android:id="@+id/nama_lengkap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_person_24"
+                    android:hint="Nama Lengkap"
+                    android:paddingLeft="20dp"
+                    android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#ffff">
+
+                    <EditText
+                        android:id="@+id/no_hp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_call_24"
+                        android:hint="No Handphone"
+                        android:inputType="phone"
+                        android:paddingLeft="20dp"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#ffff">
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        android:hint="Nama Pengguna"
+                        android:paddingLeft="20dp"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#ffff"
+                    app:passwordToggleEnabled="true"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="92dp"
+                    tools:layout_editor_absoluteY="248dp">
+
+                    <EditText
+
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:ems="5"
+                        android:hint="Kata Sandi"
+                        android:inputType="textPassword"
+                        android:paddingLeft="20dp"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#ffff"
+                    app:passwordToggleEnabled="true"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="92dp"
+                    tools:layout_editor_absoluteY="248dp">
+
+                    <EditText
+                        android:id="@+id/repassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_baseline_lock_24"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:ems="5"
+                        android:hint="Ulangi Kata Sandi"
+                        android:inputType="textPassword"
+                        android:paddingLeft="20dp"
+                        android:textSize="15sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btn_daftar"
+                android:layout_width="107dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button1"
+                android:paddingRight="10dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:weightSum="3">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Atau"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Sudah punya akun ? "
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Masuk"
+                android:textColor="#2196F3"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
