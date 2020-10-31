@@ -19,6 +19,9 @@
             android:name=".Activity.BacaActivity"
             android:theme="@style/splash" />
         <activity
+            android:name=".Activity.DetailPendampingActivity"
+            android:theme="@style/splash" />
+        <activity
             android:name=".Activity.DaftarPendampingActivity"
             android:theme="@style/splash" />
         <activity

@@ -32,6 +32,7 @@ import java.io.OutputStreamWriter;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -56,6 +57,17 @@ public class DetailPendampingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_pendamping);
+        Toolbar toolbar = findViewById(R.id.toolbar2);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Detail Pendamping");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailPendampingActivity.this, HomePendampingActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+            }
+        });
         kegiatan=findViewById(R.id.kegiatan);
         catatan=findViewById(R.id.catatan);
         bahasan=findViewById(R.id.bahasan);
@@ -66,6 +78,7 @@ public class DetailPendampingActivity extends AppCompatActivity {
         btnClear=findViewById(R.id.btnClear);
         imgTtd=findViewById(R.id.imgTtd);
         txtImg=findViewById(R.id.txtImg);
+
 
 
         txtBuat=findViewById(R.id.txtBuat);
