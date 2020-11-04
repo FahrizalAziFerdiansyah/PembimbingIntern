@@ -12,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PieunivActivity"></activity>
+        <activity android:name=".PieprodiActivity" />
+        <activity android:name=".PiejkActivity" />
+        <activity android:name=".PiedailyActivity" />
         <activity
             android:name=".Activity.LoginPendampingActivity"
             android:theme="@style/splash" />
@@ -36,7 +40,6 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/splash" />
-
         <activity
             android:name=".Activity.SplashActivity"
             android:theme="@style/splash">

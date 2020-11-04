@@ -6,6 +6,10 @@ import android.content.SharedPreferences;
 import android.example.com.pembimbingintern.Adapter.MhsAdapter;
 import android.example.com.pembimbingintern.Model.GetPengajuan;
 import android.example.com.pembimbingintern.Model.Pengajuan;
+import android.example.com.pembimbingintern.PiedailyActivity;
+import android.example.com.pembimbingintern.PiejkActivity;
+import android.example.com.pembimbingintern.PieprodiActivity;
+import android.example.com.pembimbingintern.PieunivActivity;
 import android.example.com.pembimbingintern.R;
 import android.example.com.pembimbingintern.RestApi.ApiClient;
 import android.example.com.pembimbingintern.RestApi.ApiInterface;
@@ -32,7 +36,7 @@ public class HomePendampingActivity extends AppCompatActivity {
     CardView lihat;
     TextView id, nama, no_hp;
     ApiInterface mApiInterface;
-    ImageView imgPengajuan;
+    ImageView imgPengajuan, chartuniv, chartjk, chartdaily, chartprodi;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -46,6 +50,10 @@ public class HomePendampingActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.list_mhs);
         mLayoutManager = new LinearLayoutManager(this);
         imgPengajuan=findViewById(R.id.imgPengajuan);
+        chartuniv = findViewById(R.id.chartuniv);
+        chartjk = findViewById(R.id.chartjk);
+        chartdaily = findViewById(R.id.chartdaily);
+        chartprodi = findViewById(R.id.chartprodi);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         sharedPreferences = HomePendampingActivity.this.getSharedPreferences("remember", Context.MODE_PRIVATE);
@@ -60,6 +68,40 @@ public class HomePendampingActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        chartuniv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), PieunivActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        chartjk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), PiejkActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        chartdaily.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), PiedailyActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        chartprodi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), PieprodiActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
 
         Refresh();
 

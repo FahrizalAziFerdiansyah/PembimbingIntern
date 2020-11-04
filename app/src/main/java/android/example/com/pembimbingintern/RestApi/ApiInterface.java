@@ -15,6 +15,7 @@ import android.example.com.pembimbingintern.Model.PostPutDelMhs;
 import android.example.com.pembimbingintern.Model.PostPutDelPendamping;
 import android.example.com.pembimbingintern.Model.PostPutDelPengajuan;
 import android.example.com.pembimbingintern.Model.UploadImage;
+import android.view.View;
 
 import java.util.Map;
 
@@ -160,4 +161,5 @@ public interface ApiInterface {
                                @Field("catatan") String catatan,
                                @Field("img") String img);
 
+    void setOnClickListener(View.OnClickListener onClickListener);
 }

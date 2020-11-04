@@ -139,7 +139,7 @@
                 android:layout_width="107dp"
                 android:layout_height="43dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button1"
                 android:paddingRight="10dp"
                 android:textAllCaps="false" />
