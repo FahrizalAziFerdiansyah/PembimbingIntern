@@ -16,7 +16,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="200dp"
-        android:src="@drawable/logo2"
+        android:src="@drawable/logo"
         android:textSize="25sp" />
 
 
@@ -144,35 +144,6 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:text="Daftar"
-                android:textColor="#2196F3"
-                android:textSize="13sp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="Login sebagai mahasiswa ? "
-                android:textSize="13sp" />
-
-            <TextView
-                android:foreground="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:id="@+id/login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="Login"
                 android:textColor="#2196F3"
                 android:textSize="13sp" />
         </LinearLayout>
