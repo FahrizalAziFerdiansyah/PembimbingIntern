@@ -182,14 +182,14 @@
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/iconuniv" />
+                android:src="@drawable/univ" />
             <ImageView
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:id="@+id/chartjk"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/iconpiejk" />
+                android:src="@drawable/jk" />
 
             <ImageView
                 android:clickable="true"
@@ -197,14 +197,14 @@
                 android:id="@+id/chartprodi"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/iconprodi" />
+                android:src="@drawable/prodi" />
             <ImageView
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:id="@+id/chartdaily"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/iconlaporanharian" />
+                android:src="@drawable/laporan" />
         </LinearLayout>
 
         <LinearLayout
