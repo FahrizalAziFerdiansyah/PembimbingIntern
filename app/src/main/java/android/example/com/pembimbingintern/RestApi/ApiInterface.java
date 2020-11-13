@@ -161,5 +161,5 @@ public interface ApiInterface {
                                @Field("catatan") String catatan,
                                @Field("img") String img);
 
-    void setOnClickListener(View.OnClickListener onClickListener);
+
 }
