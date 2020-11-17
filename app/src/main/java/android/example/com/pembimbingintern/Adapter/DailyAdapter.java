@@ -90,7 +90,7 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.MyViewHolder
         } else{
             belum.setVisibility(View.INVISIBLE);
             img.setVisibility(View.VISIBLE);
-            final String urlGambarBerita = "http://192.168.43.224/apimagang/uploads/" +urlImage ;
+            final String urlGambarBerita = "http://192.168.43.22/apimagang/uploads/" +urlImage ;
             Picasso.get().load(urlGambarBerita).into(img);
         }
 
