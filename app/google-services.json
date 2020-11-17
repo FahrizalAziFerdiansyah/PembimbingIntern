@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "354658689894",
+    "firebase_url": "https://pembimbing-intern.firebaseio.com",
+    "project_id": "pembimbing-intern",
+    "storage_bucket": "pembimbing-intern.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354658689894:android:757e942f97713505a09ea7",
+        "android_client_info": {
+          "package_name": "android.example.com.pembimbingintern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354658689894-jf6uooc7vqjou0a5hjmee1mralsls5cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCScCd7kmUagCEzRu9yilYNPHmM2l5G27s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354658689894-jf6uooc7vqjou0a5hjmee1mralsls5cl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

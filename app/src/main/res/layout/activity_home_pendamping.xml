@@ -143,45 +143,51 @@
             android:layout_marginTop="105dp"
             android:gravity="center">
 
-            <ImageView
-
-                android:id="@+id/imgLaporan"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/icon4" />
 
             <ImageView
                 android:id="@+id/imgProfile"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:src="@drawable/icon7" />
 
             <ImageView
                 android:id="@+id/imgPengajuan"
-                android:layout_width="95dp"
-                android:layout_height="95dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
                 android:src="@drawable/pengajuan" />
+            <ImageView
+                android:id="@+id/chartdaily"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/laporan" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="20dp"
             android:layout_below="@id/l1"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
 
             <ImageView
-                android:clickable="true"
                 android:id="@+id/chartuniv"
-                android:foreground="?attr/selectableItemBackground"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
                 android:src="@drawable/univ" />
             <ImageView
                 android:clickable="true"
@@ -189,6 +195,8 @@
                 android:id="@+id/chartjk"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:src="@drawable/jk" />
 
             <ImageView
@@ -197,14 +205,10 @@
                 android:id="@+id/chartprodi"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:src="@drawable/prodi" />
-            <ImageView
-                android:clickable="true"
-                android:foreground="?attr/selectableItemBackground"
-                android:id="@+id/chartdaily"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/laporan" />
+
         </LinearLayout>
 
         <LinearLayout
