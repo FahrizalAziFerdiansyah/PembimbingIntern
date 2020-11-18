@@ -1,6 +1,7 @@
 package android.example.com.pembimbingintern.RestApi;
 
 import android.example.com.pembimbingintern.Model.Akun;
+import android.example.com.pembimbingintern.Model.Chart;
 import android.example.com.pembimbingintern.Model.Daily;
 import android.example.com.pembimbingintern.Model.GetAkun;
 import android.example.com.pembimbingintern.Model.GetDaily;
@@ -17,6 +18,7 @@ import android.example.com.pembimbingintern.Model.PostPutDelPengajuan;
 import android.example.com.pembimbingintern.Model.UploadImage;
 import android.view.View;
 
+import java.util.List;
 import java.util.Map;
 
 import okhttp3.MultipartBody;
@@ -37,6 +39,19 @@ public interface ApiInterface {
 
     @GET("user")
     Call<GetAkun> getAkun();
+
+    @GET("mahasiswa/kelamin")
+    Call<List<Chart>> getKelamin();
+
+
+    @GET("mahasiswa/kampus")
+    Call<List<Chart>> getKampus();
+
+    @GET("mahasiswa/jurusan")
+    Call<List<Chart>> getJurusan();
+
+    @GET("mahasiswa/status")
+    Call<List<Chart>> getStatus();
 
 
     @GET("pendamping")
@@ -154,6 +169,8 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST("pendamping/mahasiswa")
     Call<GetPengajuan> postMhs(@Field("id_pendamping") String id_pendamping);
+
+
 
     @FormUrlEncoded
     @POST("pendamping/konfirmasi")
