@@ -77,6 +77,15 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="IPK Mahasiswa" />
+                <TextView
+                    android:id="@+id/ipkMhs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IPK" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="Proposal" />
                 <TextView
                     android:id="@+id/file"

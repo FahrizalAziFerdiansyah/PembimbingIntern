@@ -33,7 +33,7 @@ import retrofit2.Response;
 
 public class DetailMahasiswaActivity extends AppCompatActivity {
     CircleImageView img;
-    TextView namaMhs,jurusanMhs,kampusMhs,fileMhs,status;
+    TextView namaMhs,jurusanMhs,kampusMhs,ipkMhs,fileMhs,status;
     Button btnstatus,btnSimpan;
     Spinner spnStatus;
     String nim;
@@ -65,6 +65,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         namaMhs=findViewById(R.id.namaMhs);
         jurusanMhs=findViewById(R.id.jurusanMhs);
         kampusMhs=findViewById(R.id.kampusMhs);
+        ipkMhs=findViewById(R.id.ipkMhs);
         fileMhs=findViewById(R.id.file);
         status=findViewById(R.id.status);
         btnstatus=findViewById(R.id.btnStatus);
@@ -76,6 +77,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         namaMhs.setText(mIntent.getStringExtra("nama"));
         jurusanMhs.setText(mIntent.getStringExtra("jurusan"));
         kampusMhs.setText(mIntent.getStringExtra("kampus"));
+        ipkMhs.setText(mIntent.getStringExtra("ipk"));
         fileMhs.setText(mIntent.getStringExtra("file"));
         status.setText(mIntent.getStringExtra("status"));
         nim=mIntent.getStringExtra("nim");
@@ -97,6 +99,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
                 a.putExtra("jurusan", mIntent.getStringExtra("jurusan") );
                 a.putExtra("kampus", mIntent.getStringExtra("kampus") );
                 a.putExtra("status", mIntent.getStringExtra("status") );
+                a.putExtra("ipk", mIntent.getStringExtra("ipk"));
                 a.putExtra("foto", mIntent.getStringExtra("foto") );
                 a.putExtra("nim", mIntent.getStringExtra("nim") );
                 v.getContext().startActivity(a);
