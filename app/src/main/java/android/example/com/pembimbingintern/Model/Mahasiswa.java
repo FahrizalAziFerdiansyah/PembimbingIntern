@@ -19,6 +19,8 @@ public class Mahasiswa {
     private  String no_hp;
     @SerializedName("email")
     private  String email;
+    @SerializedName("ipk mahasiswa")
+    private String ipk;
     @SerializedName("foto_mahasiswa")
     private String foto_mahasiswa;
     @SerializedName("tgl_daftar")
@@ -38,6 +40,7 @@ public class Mahasiswa {
         this.jurusan = jurusan;
         this.no_hp = no_hp;
         this.email = email;
+        this.ipk = ipk;
         this.foto_mahasiswa = foto_mahasiswa;
         this.tgl_daftar = tgl_daftar;
         this.id_akun = id_akun;
@@ -113,6 +116,10 @@ public class Mahasiswa {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getIpk() { return ipk; }
+
+    public void setIpk(String ipk) { this.ipk = ipk; }
 
     public String getFoto_mahasiswa() {
         return foto_mahasiswa;
