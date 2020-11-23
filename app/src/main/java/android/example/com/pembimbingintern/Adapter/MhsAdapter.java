@@ -49,7 +49,7 @@ public class MhsAdapter extends RecyclerView.Adapter<MhsAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.txt_judul.setText(pengajuanList.get(position).getNama_mahasiswa());
         holder.txt_keterangan.setText(pengajuanList.get(position).getJurusan());
-        final String urlGambarBerita = "http://192.168.43.22/apimagang/uploads/" + pengajuanList.get(position).getFoto_mahasiswa();
+        final String urlGambarBerita = "http://192.168.43.224/apimagang/uploads/" + pengajuanList.get(position).getFoto_mahasiswa();
         Picasso.get().load(urlGambarBerita).into(holder.img);
         holder.detail.setOnClickListener(new View.OnClickListener() {
             @Override
