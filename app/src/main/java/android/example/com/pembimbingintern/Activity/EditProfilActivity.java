@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.example.com.pembimbingintern.Model.PostPutDelPendamping;
+import android.example.com.pembimbingintern.R;
 import android.example.com.pembimbingintern.RestApi.ApiClient;
 import android.example.com.pembimbingintern.RestApi.ApiInterface;
 import android.graphics.Bitmap;
@@ -25,7 +26,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class EditProfilActivity extends AppCompatActivity  {
-
     EditText nama_lengkap, no_hp, nama_pengguna, repassword, password;
     Button btn_simpan;
     TextView editprofil;
@@ -75,7 +75,7 @@ public class EditProfilActivity extends AppCompatActivity  {
                 } else {
 
                     progressDialog.show();
-                    Call<PostPutDelPendamping> pendampingCall = mApiInterface.postAkunPendamping(nama_lengkap.getText().toString(), no_hp.getText().toString(), username.getText().toString(), password.getText().toString());
+                    Call<PostPutDelPendamping> pendampingCall = mApiInterface.postAkunPendamping(nama_lengkap.getText().toString(), no_hp.getText().toString(), nama_pengguna.getText().toString(), password.getText().toString());
                     pendampingCall.enqueue(new Callback<PostPutDelPendamping>() {
                         @Override
                         public void onResponse(Call<PostPutDelPendamping> call, Response<PostPutDelPendamping> response) {
