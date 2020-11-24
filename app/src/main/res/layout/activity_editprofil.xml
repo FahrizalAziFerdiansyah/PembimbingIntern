@@ -67,7 +67,8 @@
                 android:hint="Nama Lengkap"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/design_default_color_on_secondary"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:drawableLeft="@drawable/ic_baseline_person_black_24"/>
 
             <EditText
                 android:id="@+id/no_hp"
@@ -79,7 +80,8 @@
                 android:inputType="phone"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/design_default_color_on_secondary"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:drawableLeft="@drawable/ic_baseline_call_black_24"/>
 
             <EditText
                 android:id="@+id/namapengguna"
@@ -90,7 +92,8 @@
                 android:hint="Nama Pengguna"
                 android:paddingLeft="20dp"
                 android:textColorHint="@color/design_default_color_on_secondary"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:drawableLeft="@drawable/ic_baseline_person_black_24"/>
 
             <EditText
                 android:id="@+id/password"
@@ -99,8 +102,8 @@
                 android:layout_marginTop="15dp"
                 android:background="@android:color/white"
                 android:textColorHint="@color/design_default_color_on_secondary"
-                android:drawableStart="@drawable/ic_baseline_lock_24"
-                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawableStart="@drawable/ic_baseline_lock_black_24"
+                android:drawableLeft="@drawable/ic_baseline_lock_black_24"
                 android:ems="5"
                 android:hint="Kata Sandi"
                 android:inputType="textPassword"
@@ -113,8 +116,8 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="15dp"
                 android:background="@android:color/white"
-                android:drawableStart="@drawable/ic_baseline_lock_24"
-                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawableStart="@drawable/ic_baseline_lock_black_24"
+                android:drawableLeft="@drawable/ic_baseline_lock_black_24"
                 android:ems="5"
                 android:hint="Ulangi Kata Sandi"
                 android:inputType="textPassword"
@@ -122,34 +125,17 @@
                 android:textColorHint="@color/design_default_color_on_secondary"
                 android:textSize="15sp" />
 
-            <LinearLayout
-                android:layout_width="363dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="15dp"
-                android:weightSum="2">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/pilih"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="0.25"
-                    android:clickable="true"
-                    android:foreground="?attr/selectableItemBackground">
-
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
             <Button
                 android:id="@+id/btn_daftar"
-                android:layout_width="99dp"
-                android:layout_height="40dp"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/button6"
                 android:paddingRight="10dp"
                 android:textAllCaps="false" />
+
         </LinearLayout>
     </ScrollView>
 
