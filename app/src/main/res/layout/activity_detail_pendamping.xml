@@ -55,11 +55,7 @@
             <EditText
                 android:id="@+id/catatan"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:drawableLeft="@drawable/ic_baseline_star_border_24"
-                android:drawableBottom="@drawable/ic_baseline_star_border_24"
-                android:drawableStart="@drawable/ic_baseline_star_border_24"
-                android:drawableTop="@drawable/ic_baseline_star_border_24"/>
+                android:layout_height="100dp" />
 
             <TextView
                 android:layout_width="wrap_content"

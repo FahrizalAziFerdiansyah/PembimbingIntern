@@ -33,22 +33,6 @@
             android:text="Catatan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="100dp"
-            android:layout_marginBottom="11dp"
-            android:background="@drawable/bintang" />
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="100dp"
-            android:layout_marginBottom="11dp"
-            android:background="@drawable/bintang" />
         <TextView
             android:fontFamily="@string/appbar_scrolling_view_behavior"
             android:id="@+id/catatan"
