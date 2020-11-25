@@ -2,6 +2,7 @@ package android.example.com.pembimbingintern.Activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.example.com.pembimbingintern.Firebase.SharedPrefManager;
 import android.example.com.pembimbingintern.Model.PostPutDelPendamping;
 import android.example.com.pembimbingintern.R;
 import android.example.com.pembimbingintern.RestApi.ApiClient;
@@ -66,9 +67,9 @@ public class DaftarPendampingActivity extends AppCompatActivity {
                 } else if (!repassword.getText().toString().equals(password.getText().toString())) {
                     Toast.makeText(getApplicationContext(),"Password harus sesuai!",Toast.LENGTH_SHORT).show();
                 } else {
-
+                    String token = SharedPrefManager.getInstance(DaftarPendampingActivity.this).getDeviceToken();
                     progressDialog.show();
-                    Call<PostPutDelPendamping> pendampingCall = mApiInterface.postAkunPendamping(nama_lengkap.getText().toString(), no_hp.getText().toString(), username.getText().toString(), password.getText().toString());
+                    Call<PostPutDelPendamping> pendampingCall = mApiInterface.postAkunPendamping(nama_lengkap.getText().toString(), no_hp.getText().toString(), username.getText().toString(), password.getText().toString(),token);
                     pendampingCall.enqueue(new Callback<PostPutDelPendamping>() {
                         @Override
                         public void onResponse(Call<PostPutDelPendamping> call, Response<PostPutDelPendamping> response) {

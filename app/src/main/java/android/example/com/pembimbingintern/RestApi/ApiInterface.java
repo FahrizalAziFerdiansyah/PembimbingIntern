@@ -68,7 +68,9 @@ public interface ApiInterface {
             @Field("nama_pendamping") String nama_pendamping,
             @Field("no_hp") String no_hp,
             @Field("username") String username,
-            @Field("password") String password);
+            @Field("password") String password,
+            @Field("token") String token
+            );
 
     @FormUrlEncoded
     @POST("user/login")
