@@ -56,6 +56,9 @@ public class LoginPendampingActivity extends AppCompatActivity {
                         String id_pendamping=response.body().getId_pendamping();
                         String nama=response.body().getNama_pendamping();
                         String no_hp=response.body().getNo_hp();
+                        String username=response.body().getUsername();
+                        String password=response.body().getPassword();
+                        String token=response.body().getToken();
                         if (TextUtils.isEmpty(id_pendamping)){
                             Toast.makeText(LoginPendampingActivity.this, "Username atau Password salah", Toast.LENGTH_LONG).show();
                         } else{
@@ -65,6 +68,9 @@ public class LoginPendampingActivity extends AppCompatActivity {
                             editor.putString("id_pendamping", id_pendamping);
                             editor.putString("nama", nama);
                             editor.putString("no_hp", no_hp);
+                            editor.putString("username", username);
+                            editor.putString("password", password);
+                            editor.putString("token", token);
                             editor.apply();
                             startActivity(intent);
                             finish();

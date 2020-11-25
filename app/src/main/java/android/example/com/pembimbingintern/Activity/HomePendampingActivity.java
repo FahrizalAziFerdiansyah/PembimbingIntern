@@ -36,7 +36,7 @@ public class HomePendampingActivity extends AppCompatActivity {
     CardView lihat;
     TextView id, nama, no_hp;
     ApiInterface mApiInterface;
-    ImageView imgPengajuan, chartuniv, chartjk, chartdaily, chartprodi;
+    ImageView imgPengajuan, chartuniv, chartjk, chartdaily, chartprodi,imgEdit;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -54,6 +54,7 @@ public class HomePendampingActivity extends AppCompatActivity {
         chartjk = findViewById(R.id.chartjk);
         chartdaily = findViewById(R.id.chartdaily);
         chartprodi = findViewById(R.id.chartprodi);
+        imgEdit=findViewById(R.id.imgProfile);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         sharedPreferences = HomePendampingActivity.this.getSharedPreferences("remember", Context.MODE_PRIVATE);
@@ -65,6 +66,13 @@ public class HomePendampingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(),PengajuanMahasiswaActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+        imgEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),EditProfilActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

@@ -73,6 +73,17 @@ public interface ApiInterface {
             );
 
     @FormUrlEncoded
+    @PUT("pendamping/profil")
+    Call<PostPutDelPendamping> putAkunPendamping(
+            @Field("id_pendamping") String id_pendamping,
+            @Field("nama_pendamping") String nama_pendamping,
+            @Field("no_hp") String no_hp,
+            @Field("username") String username,
+            @Field("password") String password,
+            @Field("token") String token
+    );
+
+    @FormUrlEncoded
     @POST("user/login")
     Call<Akun> postLogin(@Field("username") String username,
                          @Field("password") String password);

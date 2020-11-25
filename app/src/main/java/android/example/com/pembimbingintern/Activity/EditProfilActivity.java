@@ -31,32 +31,35 @@ public class EditProfilActivity extends AppCompatActivity  {
     TextView editprofil;
     ApiInterface mApiInterface;
     ProgressDialog progressDialog;
+    String id_pendamping,token;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofil);
 
-        nama_lengkap = findViewById(R.id.nama_lengkap);
+        nama_lengkap = findViewById(R.id.nama);
         no_hp = findViewById(R.id.no_hp);
         nama_pengguna = findViewById(R.id.nama_pengguna);
         password = findViewById(R.id.password);
         repassword = findViewById(R.id.repassword);
-        editprofil=findViewById(R.id.editprofil);
 
+        sharedPreferences = EditProfilActivity.this.getSharedPreferences("remember", Context.MODE_PRIVATE);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         progressDialog = new ProgressDialog(EditProfilActivity.this);
         progressDialog.setMessage("Tunggu sebentar... ");
         progressDialog.setIndeterminate(false);
         progressDialog.setCancelable(true);
 
-        editprofil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),EditProfilActivity.class);
-                startActivity(intent);
-            }
-        });
+
+        nama_lengkap.setText(sharedPreferences.getString("nama","0"));
+        no_hp.setText(sharedPreferences.getString("no_hp","0"));
+        nama_pengguna.setText(sharedPreferences.getString("username","0"));
+        password.setText(sharedPreferences.getString("password","0"));
+        repassword.setText(sharedPreferences.getString("password","0"));
+        token=sharedPreferences.getString("token","0");
+        id_pendamping=sharedPreferences.getString("id_pendamping","0");
 
         btn_simpan = findViewById(R.id.btn_simpan);
         btn_simpan.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +78,7 @@ public class EditProfilActivity extends AppCompatActivity  {
                 } else {
 
                     progressDialog.show();
-                    Call<PostPutDelPendamping> pendampingCall = mApiInterface.postAkunPendamping(nama_lengkap.getText().toString(), no_hp.getText().toString(), nama_pengguna.getText().toString(), password.getText().toString());
+                    Call<PostPutDelPendamping> pendampingCall = mApiInterface.putAkunPendamping(id_pendamping,nama_lengkap.getText().toString(), no_hp.getText().toString(), nama_pengguna.getText().toString(), password.getText().toString(),token);
                     pendampingCall.enqueue(new Callback<PostPutDelPendamping>() {
                         @Override
                         public void onResponse(Call<PostPutDelPendamping> call, Response<PostPutDelPendamping> response) {

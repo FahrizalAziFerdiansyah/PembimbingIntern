@@ -14,10 +14,13 @@ public class Pendamping {
     private String username;
     @SerializedName("password")
     private String password;
+    @SerializedName("token")
+    private String token;
 
 
     public Pendamping() {
     }
+
 
     public String getId_pendamping() {
         return id_pendamping;
@@ -57,5 +60,13 @@ public class Pendamping {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

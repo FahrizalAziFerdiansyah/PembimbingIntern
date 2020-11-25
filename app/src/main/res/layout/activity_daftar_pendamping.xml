@@ -101,13 +101,13 @@
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_baseline_lock_24"
-                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:drawableStart="@drawable/ic_lock_white_24dp"
                         android:ems="5"
                         android:hint="Kata Sandi"
                         android:inputType="textPassword"
                         android:paddingLeft="20dp"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:drawableLeft="@drawable/ic_lock_white_24dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -123,8 +123,8 @@
                         android:id="@+id/repassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_baseline_lock_24"
-                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:drawableStart="@drawable/ic_lock_white_24dp"
+                        android:drawableLeft="@drawable/ic_lock_white_24dp"
                         android:ems="5"
                         android:hint="Ulangi Kata Sandi"
                         android:inputType="textPassword"
