@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.EditprofilActivity"></activity>
+        <activity android:name=".Activity.EditprofilActivity" />
         <activity android:name=".PieunivActivity" />
         <activity android:name=".PieprodiActivity" />
         <activity android:name=".PiejkActivity" />
