@@ -2,7 +2,7 @@ package android.example.com.pembimbingintern.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Pengajuan {
+public class    Pengajuan {
 
     @SerializedName("tgl_mulai")
     private String tgl_mulai;
@@ -29,6 +29,7 @@ public class Pengajuan {
     private String id_daily;
     private String catatan;
     private String img;
+    private String ipk;
 
 
 
@@ -41,7 +42,7 @@ public class Pengajuan {
     public Pengajuan() {
     }
 
-    public Pengajuan(String tgl_mulai, String tgl_selesai, String tgl_pengajuan, String file, String NIM, String status, String nama_mahasiswa, String jurusan, String asal_kampus, String foto_mahasiswa, String jenis_kelamin, String id_daily, String catatan, String img) {
+    public Pengajuan(String tgl_mulai, String tgl_selesai, String tgl_pengajuan, String file, String NIM, String status, String nama_mahasiswa, String jurusan, String asal_kampus, String foto_mahasiswa, String jenis_kelamin, String id_daily, String catatan, String img,String ipk) {
         this.tgl_mulai = tgl_mulai;
         this.tgl_selesai = tgl_selesai;
         this.tgl_pengajuan = tgl_pengajuan;
@@ -56,6 +57,7 @@ public class Pengajuan {
         this.id_daily = id_daily;
         this.catatan = catatan;
         this.img = img;
+        this.ipk= ipk;
     }
 
     public String getTgl_mulai() {
@@ -168,5 +170,14 @@ public class Pengajuan {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+
+    public String getIpk() {
+        return ipk;
+    }
+
+    public void setIpk(String ipk) {
+        this.ipk = ipk;
     }
 }

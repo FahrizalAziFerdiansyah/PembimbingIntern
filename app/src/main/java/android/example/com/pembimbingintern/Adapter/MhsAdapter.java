@@ -61,6 +61,7 @@ public class MhsAdapter extends RecyclerView.Adapter<MhsAdapter.MyViewHolder> {
                 mIntent.putExtra("file", pengajuanList.get(position).getFile());
                 mIntent.putExtra("status", pengajuanList.get(position).getStatus());
                 mIntent.putExtra("foto", pengajuanList.get(position).getFoto_mahasiswa());
+                mIntent.putExtra("ipk", pengajuanList.get(position).getIpk());
                 mIntent.putExtra("nim", pengajuanList.get(position).getNIM());
                 v.getContext().startActivity(mIntent);
             }

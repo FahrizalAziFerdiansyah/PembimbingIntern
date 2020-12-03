@@ -55,7 +55,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <androidx.appcompat.widget.AppCompatRatingBar
+            <RatingBar
                 android:id="@+id/penilaian"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

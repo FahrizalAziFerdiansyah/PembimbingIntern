@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,16 +42,17 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class DetailPendampingActivity extends AppCompatActivity {
-    TextView pembimbing,kegiatan, catatan,bahasan,status,txtBuat,txtUpload,txtImg;
-    Button tutup,simpan,btnSave,btnClear,btnPilih;
-    LinearLayout lineTtd,lineUpload;
+    TextView pembimbing, kegiatan, catatan, bahasan, status, txtBuat, txtUpload, txtImg;
+    Button tutup, simpan, btnSave, btnClear, btnPilih;
+    LinearLayout lineTtd, lineUpload;
     SignaturePad signaturePad;
     Bitmap bitmap;
-    ImageView img,imgTtd;
+    ImageView img, imgTtd;
     String urlImage;
-    String mediaPath,id_daily,namaTtd;
+    String mediaPath, id_daily, namaTtd;
     ApiInterface mApiInterface;
     Intent mIntent;
+    RatingBar ratingBar;
 
 
     @Override
@@ -68,25 +70,25 @@ public class DetailPendampingActivity extends AppCompatActivity {
                 startActivity(new Intent(DetailPendampingActivity.this, HomePendampingActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
             }
         });
-        kegiatan=findViewById(R.id.kegiatan);
-        catatan=findViewById(R.id.catatan);
-        bahasan=findViewById(R.id.bahasan);
-        btnPilih=findViewById(R.id.btnPilih);
-        status=findViewById(R.id.status);
-        signaturePad=findViewById(R.id.signature_pad);
-        btnSave=findViewById(R.id.btnSave);
-        btnClear=findViewById(R.id.btnClear);
-        imgTtd=findViewById(R.id.imgTtd);
-        txtImg=findViewById(R.id.txtImg);
+        kegiatan = findViewById(R.id.kegiatan);
+        catatan = findViewById(R.id.catatan);
+        bahasan = findViewById(R.id.bahasan);
+        btnPilih = findViewById(R.id.btnPilih);
+        status = findViewById(R.id.status);
+        signaturePad = findViewById(R.id.signature_pad);
+        btnSave = findViewById(R.id.btnSave);
+        btnClear = findViewById(R.id.btnClear);
+        imgTtd = findViewById(R.id.imgTtd);
+        txtImg = findViewById(R.id.txtImg);
+        ratingBar = findViewById(R.id.penilaian);
 
 
+        txtBuat = findViewById(R.id.txtBuat);
+        txtUpload = findViewById(R.id.txtUpload);
+        lineTtd = findViewById(R.id.lineTtd);
+        lineUpload = findViewById(R.id.lineUpload);
 
-        txtBuat=findViewById(R.id.txtBuat);
-        txtUpload=findViewById(R.id.txtUpload);
-        lineTtd=findViewById(R.id.lineTtd);
-        lineUpload=findViewById(R.id.lineUpload);
-
-        mApiInterface= ApiClient.getClient().create(ApiInterface.class);
+        mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
 
         btnPilih.setOnClickListener(new View.OnClickListener() {
@@ -153,19 +155,19 @@ public class DetailPendampingActivity extends AppCompatActivity {
             }
         });
 
-        mIntent=getIntent();
+        mIntent = getIntent();
         kegiatan.setText(mIntent.getStringExtra("kegiatan"));
         status.setText(mIntent.getStringExtra("status"));
         bahasan.setText(mIntent.getStringExtra("bahasan"));
-        id_daily=mIntent.getStringExtra("id_daily");
+        id_daily = mIntent.getStringExtra("id_daily");
 
 
-        simpan=findViewById(R.id.simpan);
+        simpan = findViewById(R.id.simpan);
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Call<Daily> postPutDelDailyCall=mApiInterface.postKonfirmasi(id_daily,catatan.getText().toString(),txtImg.getText().toString());
+                Call<Daily> postPutDelDailyCall=mApiInterface.postKonfirmasi(id_daily, String.valueOf(ratingBar.getRating()),txtImg.getText().toString());
                 postPutDelDailyCall.enqueue(new Callback<Daily>() {
                     @Override
                     public void onResponse(Call<Daily> call, Response<Daily> response) {
@@ -179,13 +181,12 @@ public class DetailPendampingActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_SHORT).show();
                     }
                 });
-             }
+
+            }
         });
 
 
     }
-
-
 
 
     @Override
@@ -299,7 +300,7 @@ public class DetailPendampingActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<UploadImage> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Gagal", Toast.LENGTH_SHORT).show();
             }
         });
     }
