@@ -95,35 +95,55 @@
                 android:textSize="15sp"
                 android:drawableLeft="@drawable/ic_person_black_24dp"/>
 
-            <EditText
-                android:id="@+id/password"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/white"
-                android:textColorHint="@color/design_default_color_on_secondary"
-                android:drawableStart="@drawable/ic_lock_black_24dp"
-                android:drawableLeft="@drawable/ic_lock_black_24dp"
-                android:ems="5"
-                android:hint="Kata Sandi"
-                android:inputType="textPassword"
-                android:paddingLeft="20dp"
-                android:textSize="15sp" />
+                android:layout_height="wrap_content"
+                android:textColorHint="#OOOOO"
+                app:passwordToggleEnabled="true"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="248dp">
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/white"
+                    android:textColorHint="@color/design_default_color_on_secondary"
+                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:ems="5"
+                    android:hint="Kata Sandi"
+                    android:inputType="textPassword"
+                    android:paddingLeft="20dp"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/repassword"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="15dp"
-                android:background="@android:color/white"
-                android:drawableStart="@drawable/ic_lock_black_24dp"
-                android:drawableLeft="@drawable/ic_lock_black_24dp"
-                android:ems="5"
-                android:hint="Ulangi Kata Sandi"
-                android:inputType="textPassword"
-                android:paddingLeft="20dp"
-                android:textColorHint="@color/design_default_color_on_secondary"
-                android:textSize="15sp" />
+                android:layout_height="wrap_content"
+                android:textColorHint="#OOOOO"
+                 
+                app:passwordToggleEnabled="true"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="248dp">
+
+                <EditText
+                    android:id="@+id/repassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/white"
+                    android:drawableStart="@drawable/ic_lock_black_24dp"
+                    android:drawableLeft="@drawable/ic_lock_black_24dp"
+                    android:ems="5"
+                    android:hint="Ulangi Kata Sandi"
+                    android:inputType="textPassword"
+                    android:paddingLeft="20dp"
+                    android:textColorHint="@color/design_default_color_on_secondary"
+                    android:textSize="15sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_simpan"

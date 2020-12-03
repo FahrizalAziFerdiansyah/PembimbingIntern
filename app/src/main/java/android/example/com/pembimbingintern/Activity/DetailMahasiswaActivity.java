@@ -81,7 +81,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         fileMhs.setText(mIntent.getStringExtra("file"));
         status.setText(mIntent.getStringExtra("status"));
         nim=mIntent.getStringExtra("nim");
-        final String urlGambarBerita = "http://192.168.43.224/apimagang/uploads/" + mIntent.getStringExtra("foto");
+        final String urlGambarBerita = "http://192.168.43.22/apimagang/uploads/" + mIntent.getStringExtra("foto");
         Picasso.get().load(urlGambarBerita).into(img);
         btnstatus.setOnClickListener(new View.OnClickListener() {
             @Override

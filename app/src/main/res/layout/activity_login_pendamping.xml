@@ -8,7 +8,6 @@
     tools:context=".Activity.LoginPendampingActivity"
     android:background="@drawable/layout">
 
-
     <ImageView
         android:id="@+id/judul"
         android:layout_width="226dp"
@@ -18,7 +17,6 @@
         android:layout_marginRight="200dp"
         android:src="@drawable/logo2"
         android:textSize="25sp" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
