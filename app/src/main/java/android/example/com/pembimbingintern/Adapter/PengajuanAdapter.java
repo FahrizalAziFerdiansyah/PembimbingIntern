@@ -60,6 +60,7 @@ public class PengajuanAdapter extends RecyclerView.Adapter<PengajuanAdapter.MyVi
                 mIntent.putExtra("kampus", pengajuanList.get(position).getAsal_kampus());
                 mIntent.putExtra("file", pengajuanList.get(position).getFile());
                 mIntent.putExtra("status", pengajuanList.get(position).getStatus());
+                mIntent.putExtra("ipk", pengajuanList.get(position).getIpk());
                 mIntent.putExtra("foto", pengajuanList.get(position).getFoto_mahasiswa());
                 mIntent.putExtra("nim", pengajuanList.get(position).getNIM());
                 v.getContext().startActivity(mIntent);
