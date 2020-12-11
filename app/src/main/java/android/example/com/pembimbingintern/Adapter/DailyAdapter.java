@@ -34,7 +34,6 @@ public class DailyAdapter extends RecyclerView.Adapter<DailyAdapter.MyViewHolder
     Bitmap bitmap;
     int path;
 
-
     public DailyAdapter(List<Daily> dailyList, Context context) {
         this.dailyList = dailyList;
         this.context = context;
