@@ -15,7 +15,7 @@ import es.voghdev.pdfviewpager.library.remote.DownloadFile;
 import es.voghdev.pdfviewpager.library.util.FileUtil;
 
 
-public class BacaActivity extends AppCompatActivity implements DownloadFile.Listener {
+public class  BacaActivity extends AppCompatActivity implements DownloadFile.Listener {
     RemotePDFViewPager remotePDFViewPager;
     TextView file;
     Intent mIntent;
