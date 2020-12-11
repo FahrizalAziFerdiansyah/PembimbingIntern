@@ -31,14 +31,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DetailMahasiswaActivity extends AppCompatActivity {
+public class DetailMahasiswaActivity<ApiInterface> extends AppCompatActivity {
     CircleImageView img;
     TextView namaMhs,jurusanMhs,kampusMhs,ipkMhs,fileMhs,status;
     Button btnstatus,btnSimpan;
     Spinner spnStatus;
     String nim;
     LayoutInflater inflater;
-    ApiInterface mApiInterface;
+    ApiInterface mApiInterface = ApiClient.getClient().create(ApiInterface.class);
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -69,7 +69,6 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         fileMhs=findViewById(R.id.file);
         status=findViewById(R.id.status);
         btnstatus=findViewById(R.id.btnStatus);
-        mApiInterface= ApiClient.getClient().create(ApiInterface.class);
         mRecyclerView = (RecyclerView) findViewById(R.id.dailyMhs);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -81,7 +80,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         fileMhs.setText(mIntent.getStringExtra("file"));
         status.setText(mIntent.getStringExtra("status"));
         nim=mIntent.getStringExtra("nim");
-        final String urlGambarBerita = "http://192.168.43.22:81/apimagang/uploads/" + mIntent.getStringExtra("foto");
+        final String urlGambarBerita = "http://192.168.43.224/apimagang/uploads/" + mIntent.getStringExtra("foto");
         Picasso.get().load(urlGambarBerita).into(img);
         btnstatus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,5 +163,11 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private static class ApiClient {
+    }
+
+    private class GetDaily {
     }
 }
