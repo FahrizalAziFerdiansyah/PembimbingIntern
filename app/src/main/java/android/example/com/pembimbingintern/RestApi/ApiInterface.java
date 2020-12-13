@@ -36,7 +36,6 @@ import retrofit2.http.PartMap;
 
 public interface ApiInterface {
 
-
     @GET("user")
     Call<GetAkun> getAkun();
 
