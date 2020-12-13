@@ -38,7 +38,7 @@ public class DetailMahasiswaActivity<ApiInterface> extends AppCompatActivity {
     Spinner spnStatus;
     String nim;
     LayoutInflater inflater;
-    ApiInterface mApiInterface = ApiClient.getClient().create(ApiInterface.class);
+    ApiInterface mApiInterface;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;

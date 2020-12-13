@@ -55,38 +55,46 @@
                     android:id="@+id/namaMhs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama Mahasiswa" />
+                    android:text="Nama Mahasiswa"
+                    android:textStyle="bold"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Jurusan" />
+                    android:text="Jurusan"
+                    android:layout_marginTop="5dp"/>
                 <TextView
                     android:id="@+id/jurusanMhs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Jurusan Mahasiswa" />
+                    android:text="Jurusan Mahasiswa"
+                    android:textStyle="bold"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kampus" />
+                    android:text="Kampus"
+                    android:layout_marginTop="5dp"/>
                 <TextView
                     android:id="@+id/kampusMhs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kampus Mahasiswa" />
+                    android:text="Kampus Mahasiswa"
+                    android:textStyle="bold"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="IPK Mahasiswa" />
+                    android:text="IPK Mahasiswa"
+                    android:layout_marginTop="5dp"/>
                 <TextView
                     android:id="@+id/ipkMhs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="IPK" />
+                    android:text="IPK"
+                    android:textStyle="bold"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Proposal" />
+                    android:text="Proposal"
+                    android:layout_marginTop="5dp"/>
                 <TextView
                     android:id="@+id/file"
                     android:foreground="?android:attr/selectableItemBackground"
