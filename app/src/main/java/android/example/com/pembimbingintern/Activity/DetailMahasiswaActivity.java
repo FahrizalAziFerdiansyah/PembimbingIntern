@@ -7,7 +7,6 @@ import android.example.com.pembimbingintern.Model.Daily;
 import android.example.com.pembimbingintern.Model.GetDaily;
 import android.example.com.pembimbingintern.Model.PostPutDelPengajuan;
 import android.example.com.pembimbingintern.R;
-import android.example.com.pembimbingintern.RestApi.ApiClient;
 import android.example.com.pembimbingintern.RestApi.ApiInterface;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,7 +46,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_mahasiswa);
-
+  
 
         Toolbar toolbar = findViewById(R.id.toolbar2);
 
@@ -80,7 +79,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         fileMhs.setText(mIntent.getStringExtra("file"));
         status.setText(mIntent.getStringExtra("status"));
         nim=mIntent.getStringExtra("nim");
-        final String urlGambarBerita = "http://192.168.43.224/apimagang/uploads/" + mIntent.getStringExtra("foto");
+        final String urlGambarBerita = "http://192.168.43.22:81/apimagang/uploads/" + mIntent.getStringExtra("foto");
         Picasso.get().load(urlGambarBerita).into(img);
         mApiInterface=ApiClient.getClient().create(ApiInterface.class);
         btnstatus.setOnClickListener(new View.OnClickListener() {
