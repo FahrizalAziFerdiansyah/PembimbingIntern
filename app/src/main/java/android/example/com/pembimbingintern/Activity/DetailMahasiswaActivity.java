@@ -82,6 +82,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         nim=mIntent.getStringExtra("nim");
         final String urlGambarBerita = "http://192.168.43.224/apimagang/uploads/" + mIntent.getStringExtra("foto");
         Picasso.get().load(urlGambarBerita).into(img);
+        mApiInterface=ApiClient.getClient().create(ApiInterface.class);
         btnstatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -109,16 +110,18 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
     }
 
     private void dailyMhs() {
-        Call<GetDaily> dailyCall = mApiInterface.postDaily(nim);
+       Call<GetDaily> dailyCall=mApiInterface.postDaily(nim);
         dailyCall.enqueue(new Callback<GetDaily>() {
             @Override
             public void onResponse(Call<GetDaily> call, Response<GetDaily>
                     response) {
+
                 List<Daily> dailyList = response.body().getDailyList();
 //                Log.d("Retrofit Get", "Jumlah data Kontak: " +
 //                        String.valueOf(dailyList.size()));
                 mAdapter = new DailyPendampingAdapter(dailyList, DetailMahasiswaActivity.this);
                 mRecyclerView.setAdapter(mAdapter);
+
             }
 
             @Override

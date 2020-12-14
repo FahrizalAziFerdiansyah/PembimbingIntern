@@ -61,6 +61,7 @@ public class LoginPendampingActivity extends AppCompatActivity {
                         String token=response.body().getToken();
                         if (TextUtils.isEmpty(id_pendamping)){
                             Toast.makeText(LoginPendampingActivity.this, "Username atau Password salah", Toast.LENGTH_LONG).show();
+                            progressDialog.dismiss();
                         } else{
                             progressDialog.dismiss();
                             Toast.makeText(LoginPendampingActivity.this, "Berhasil Login", Toast.LENGTH_LONG).show();
