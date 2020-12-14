@@ -7,6 +7,7 @@ import android.example.com.pembimbingintern.Model.Daily;
 import android.example.com.pembimbingintern.Model.GetDaily;
 import android.example.com.pembimbingintern.Model.PostPutDelPengajuan;
 import android.example.com.pembimbingintern.R;
+import android.example.com.pembimbingintern.RestApi.ApiClient;
 import android.example.com.pembimbingintern.RestApi.ApiInterface;
 import android.os.Bundle;
 import android.util.Log;
@@ -81,7 +82,7 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
         nim=mIntent.getStringExtra("nim");
         final String urlGambarBerita = "http://192.168.43.22:81/apimagang/uploads/" + mIntent.getStringExtra("foto");
         Picasso.get().load(urlGambarBerita).into(img);
-        mApiInterface=ApiClient.getClient().create(ApiInterface.class);
+        mApiInterface= ApiClient.getClient().create(ApiInterface.class);
         btnstatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
