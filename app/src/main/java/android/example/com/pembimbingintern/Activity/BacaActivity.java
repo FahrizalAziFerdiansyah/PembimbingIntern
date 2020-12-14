@@ -44,7 +44,7 @@ public class  BacaActivity extends AppCompatActivity implements DownloadFile.Lis
             }
         });
         Intent mIntent = getIntent();
-       remotePDFViewPager =new RemotePDFViewPager(BacaActivity.this, "http://192.168.43.224/apimagang/uploads/"+mIntent.getStringExtra("file"), this);
+       remotePDFViewPager =new RemotePDFViewPager(BacaActivity.this, "http://192.168.43.22:81/apimagang/uploads/"+mIntent.getStringExtra("file"), this);
     }
 
     @Override
