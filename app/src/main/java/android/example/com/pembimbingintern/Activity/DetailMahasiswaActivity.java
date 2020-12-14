@@ -31,14 +31,14 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DetailMahasiswaActivity extends AppCompatActivity {
+public class DetailMahasiswaActivity<ApiInterface> extends AppCompatActivity {
     CircleImageView img;
     TextView namaMhs,jurusanMhs,kampusMhs,ipkMhs,fileMhs,status;
     Button btnstatus,btnSimpan;
     Spinner spnStatus;
     String nim;
     LayoutInflater inflater;
-    ApiInterface mApiInterface;
+    ApiInterface mApiInterface = ApiClient.getClient().create(ApiInterface.class);
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -165,4 +165,9 @@ public class DetailMahasiswaActivity extends AppCompatActivity {
 
     }
 
+    private static class ApiClient {
+    }
+
+    private class GetDaily {
+    }
 }
